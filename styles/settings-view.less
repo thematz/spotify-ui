@@ -1,0 +1,126 @@
+.settings-view {
+    .section-heading {
+        &:before {
+            display: none;
+        }
+    }
+
+    .update-all-button {
+        top: 0;
+        margin-left: 10px;
+    }
+
+    .control-label {
+        width: 100%;
+
+        .setting-title {
+            color: #FFF;
+            font-weight: 500;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid @base-border-color;
+        }
+
+        .setting-description {
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    .link {
+        color: @primary-color;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+
+    .alert {
+        border: none;
+
+        &.alert-info {
+            padding: 15px 0;
+            background: transparent;
+            color: @primary-color;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .config-menu {
+        background: @base-background-color;
+
+        .panels-menu {
+            li {
+
+                a {
+                    .transition-03;
+                }
+
+                &.active {
+                    a {
+                        background: @background-color-selected;
+                    }
+                }
+
+                &:hover {
+                    background: @background-color-highlight;
+                }
+            }
+        }
+
+        .button-area {
+            > .btn {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .package-card {
+        .transition-03;
+        font-size: 1em;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid @base-border-color;
+        margin: 0;
+        border-radius: 0;
+        padding: 15px 0;
+
+        .package-name {
+            color: #FFF;
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        .meta-controls {
+            .status-indicator {
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                border-radius: 50% !important;
+                margin-right: 0;
+                position: relative;
+                top: 10px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                // box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+            }
+
+            .btn-toolbar {
+                >.btn-group {
+                    margin: 5px 0 0 0;
+                }
+            }
+        }
+
+        &:hover {
+            background: transparent;
+        }
+    }
+}

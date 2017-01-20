@@ -1,0 +1,121 @@
+// Buttons
+// -------------------
+// Overrides: atom/atom/static/buttons.less
+.btn {
+    color: #FFF;
+    box-shadow: 0 0 0 1px @text-color;
+    background-color: transparent;
+    border-radius: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 15px;
+    .transition-03;
+
+    &:focus,
+    &:hover {
+        color: @text-color-highlight;
+        background-color: transparent;
+        box-shadow: 0 0 0 1px #FFF;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        color: fade(@text-color-selected, 66%);
+        background-color: darken(@button-background-color, 2%);
+    }
+
+    &.selected {
+        color: @text-color-selected;
+        background-color: @button-background-color-selected;
+    }
+
+    &:focus,
+    &:focus:active {
+        outline: none;
+    }
+
+    .icon {
+        &::before {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+// Colored buttons -----------------------
+.btn.btn-primary {
+    .btn-color(@background-color-success);
+}
+
+.btn.btn-info {
+    .btn-color(@background-color-info);
+}
+
+.btn.btn-success {
+    .btn-color(@background-color-success);
+}
+
+.btn.btn-warning {
+    .btn-color(@background-color-warning);
+}
+
+.btn.btn-error {
+    .btn-color(@background-color-error);
+}
+
+.btn-color(@bg) {
+    color: @text-color-selected;
+    background-color: @bg;
+    box-shadow: none;
+
+    &:focus,
+    &:hover {
+        background-color: lighten(@bg, 4%);
+    }
+
+    &:active {
+        background-color: darken(@bg, 4%);
+    }
+
+    &.selected {
+        background-color: lighten(@bg, 4%);
+    }
+
+    &.selected:focus,
+    &.selected:hover {
+        background-color: lighten(@bg, 8%);
+    }
+}
+// Button Group -----------------------
+.btn-group {
+    .btn {
+        .transition-01;
+        border-radius: 20px !important;
+        margin: 0 10px;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .btn.install-button {
+        box-shadow: 0 0 0 1px @text-color;
+        background: transparent;
+        border: none;
+        color: @primary-color;
+
+        &:before {
+            display: none;
+        }
+
+        &:hover {
+            box-shadow: 0 0 0 1px #FFF;
+        }
+    }
+
+    .btn.status-indicator {
+        border-radius: 0 !important;
+        box-shadow: none;
+    }
+}

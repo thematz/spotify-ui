@@ -1,0 +1,17 @@
+{
+  "name": "spotify-ui",
+  "theme": "ui",
+  "version": "0.1.0",
+  "description": "A theme for all Spotify fans",
+  "keywords": [
+    "spotify",
+    "music",
+    "ui",
+    "design"
+  ],
+  "repository": "https://github.com/joseqmatias/spotify-ui",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

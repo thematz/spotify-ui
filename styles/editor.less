@@ -1,0 +1,49 @@
+// Editor
+atom-text-editor, :host {
+    background: @base-background-color;
+}
+
+atom-text-editor::shadow {
+    .cursor {
+        border-width: 2px;
+        border-color: @primary-color;
+    }
+
+    .bracket-matcher .region {
+        background: rgba(255,255,255,0.1);
+        border: none;
+    }
+
+    .highlights {
+        .selection .region {
+            // background-color: #333;
+        }
+    }
+}
+
+// Mini Editor
+// -------------------
+// Mini Editors are the "text inputs" used in find+replace or in the settings.
+atom-text-editor[mini] {
+    padding-left: @component-padding/2;
+    color: @text-color;
+    background-color: @input-background-color;
+    box-shadow: 0 0 0 1px #333;
+    border-radius: 20px;
+    padding: 0 10px;
+    line-height: 27px;
+
+    &.is-focused {
+        background-color: darken(@input-background-color, 5%);
+    }
+
+    &::shadow {
+        .placeholder-text {
+            color: @text-color-subtle;
+        }
+
+        .selection .region {
+            background-color: @background-color-selected;
+        }
+    }
+}
