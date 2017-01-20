@@ -1,6 +1,22 @@
 // Editor
 atom-text-editor, :host {
     background: @base-background-color;
+
+    .gutter {
+        background: @base-background-color
+    }
+
+    .line-number {
+        &.cursor-line, &.cursor-line-no-selection {
+            background: @background-color-selected;
+        }
+    }
+
+    .selection {
+        .region {
+            background: @background-color-selected;
+        }
+    }
 }
 
 atom-text-editor::shadow {
