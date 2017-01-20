@@ -2,7 +2,7 @@
 
 A theme for all Spotify fans.
 
-![screenshot](https://i.imgsafe.org/29b8abdf51.jpg)
+![screenshot](https://i.imgsafe.org/29f4365e21.jpg)
 
 ### Fonts
 ##### UI
