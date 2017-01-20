@@ -27,6 +27,32 @@
         }
     }
 
+    .checkbox {
+        input[type="checkbox"] {
+            position: relative;
+            top: 2px;
+            background: transparent;
+            box-shadow: 0 0 0 1px @base-border-color;
+
+            &:checked {
+                background: @primary-color;
+                box-shadow: none;
+            }
+        }
+
+        .setting-title {
+            color: #FFF;
+            font-weight: 500;
+        }
+    }
+
+    select.form-control {
+        background: @base-border-color;
+
+        &:hover, &:focus {
+            background: @base-border-color;
+        }
+    }
 
     .link {
         color: @primary-color;
@@ -81,6 +107,19 @@
         }
     }
 
+    .packages {
+        .search-container {
+            .btn {
+                border: none;
+
+                &.selected {
+                    box-shadow: 0 0 0 1px @primary-color;
+                    background: @primary-color;
+                }
+            }
+        }
+    }
+
     .package-card {
         .transition-03;
         font-size: 1em;
@@ -120,6 +159,10 @@
         }
 
         &:hover {
+            background: transparent;
+        }
+
+        &.disabled {
             background: transparent;
         }
     }
