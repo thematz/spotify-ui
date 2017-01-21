@@ -1,0 +1,35 @@
+atom-notification {
+    &:before {
+        display: none;
+    }
+
+    .item {
+        border-top: none;
+    }
+
+    .btn-toolbar {
+        margin-top: 0;
+    }
+
+    &.success {
+        .content {
+            background: @base-border-color;
+
+            code {
+                padding: 0;
+                font-family: @font-family;
+                font-size: 100%;
+                background: transparent;
+                color: @primary-color;
+            }
+        }
+    }
+
+    .close {
+        color: #FFF;
+
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+}
