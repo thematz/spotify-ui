@@ -13,17 +13,20 @@
     padding: 0 15px;
     .transition-01;
 
-    &:focus,
-    &:hover {
+    &:hover, &:active, &:focus {
         color: @text-color-highlight;
         background-color: transparent;
-        box-shadow: 0 0 0 1px #FFF;
+    }
+
+    &:hover {
         transform: scale(1.03);
+        box-shadow: 0 0 0 1px #FFF;
     }
 
     &:active {
-        color: fade(@text-color-selected, 66%);
-        background-color: darken(@button-background-color, 2%);
+        opacity: 0.8;
+        transform: scale(1);
+        box-shadow: 0 0 0 1px #FFF;
     }
 
     &.selected {
@@ -118,4 +121,11 @@
         border-radius: 0 !important;
         box-shadow: none;
     }
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    opacity: 0.3;
+    box-shadow: 0 0 0 1px @text-color;
 }

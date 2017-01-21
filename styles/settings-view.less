@@ -148,7 +148,29 @@
                 margin: 0;
                 padding: 0;
                 border: none;
-                // box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+            }
+
+            .install-button.is-installing, .uninstall-button.is-uninstalling {
+                border: none;
+
+                &:hover {
+                    transform: scale(1) !important;
+                }
+            }
+
+            .install-button {
+                &.is-installing {
+                    background-color: @background-color-success;
+                    box-shadow: 0 0 0 1px @background-color-success;
+                    color: #FFF;
+                }
+            }
+
+            .uninstall-button {
+                &.is-uninstalling {
+                    background-color: @background-color-info;
+                    box-shadow: 0 0 0 1px @background-color-info;
+                }
             }
 
             .btn-toolbar {
