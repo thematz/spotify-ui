@@ -1,6 +1,8 @@
 atom-notification {
-    &:before {
-        display: none;
+    .icon {
+        &:before {
+            display: none;
+        }
     }
 
     .item {
@@ -14,6 +16,7 @@ atom-notification {
     &.success {
         .content {
             background: @base-border-color;
+            color: #FFF;
 
             code {
                 padding: 0;
