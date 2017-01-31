@@ -1,39 +1,56 @@
-atom-notification {
-    &.icon {
-        &:before {
-            display: none;
-        }
-    }
+atom-notifications {
+    atom-notification {
+        margin-bottom: 5px;
+        padding-left: 0;
+        font-size: 13px;
 
-    .item {
-        border-top: none;
-    }
-
-    .btn-toolbar {
-        margin-top: 0;
-    }
-
-    &.success {
-        .content {
-            background: @base-border-color;
-            color: #FFF;
-
-            code {
-                padding: 0;
-                font-family: @font-family;
-                font-size: 100%;
-                background: transparent;
-                color: @primary-color;
+        &:first-child.has-close {
+            .message {
+                padding-right: 135px;
             }
         }
-    }
 
-    .close {
-        color: #FFF;
+        &.icon {
+            &:before {
+                display: none !important;
+            }
+        }
 
-        &:hover, &:focus {
+        .item {
+            border-top: none;
+        }
+
+        .btn-toolbar {
+            margin-top: 0;
+        }
+
+        &.success {
+            .content {
+                background: @base-border-color;
+                color: #FFF;
+
+                code {
+                    padding: 0;
+                    font-family: @font-family;
+                    font-size: 100%;
+                    background: transparent;
+                    color: @primary-color;
+                }
+            }
+
+            .close-all {
+                color: #FFF;
+                border: 1px solid #FFF;
+            }
+        }
+
+        .close {
             color: #FFF;
-            opacity: 1;
+
+            &:hover, &:focus {
+                color: #FFF;
+                opacity: 1;
+            }
         }
     }
 }
